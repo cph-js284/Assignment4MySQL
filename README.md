@@ -40,25 +40,27 @@ source tmp/mysqlsampledatabase.sql
 ```
 ---------------------------------------------------------------------------------------------------------------------
 # 1 User privileges
+*The hand-in for this part of the assignment is located in the scripts-folder in the file "createusers.sql"*<br>
+<br>
 To run the script that creates the users type<br>
-*The hand-in for this part of the assignment is located in the scripts-folder in the file "createusers.sql"*
 ```
 source createusers.sql
 ```
-Inventory:<br> 
+<br>
+<b>Inventory:</b><br> 
 *In order to maintain the tables: products and productlines, the Inventory roles has been granted select,insert,update,delete rights on these 2 tables, the roles has been barred from all other tables in the database, they have also been granted right from every terminal, the role needs these rights to maintain the inventory*
 
-Bookkeeping:<br>
+<b>Bookkeeping:</b><br>
 *The Bookkeeping role has been granted  read-access(select) to all the tables in the database, should a discepancy occur the role needs to access to check data. Futhermore the role has been granted insert and update access to customers and payment tables, since this is where they need to modify data - no delete granted, the "papir-trail" is wanted*
 
-Human ressources:<br>
+<b>Human ressources:</b><br>
 *The Humanressources role has been granted select, insert, update, delete rights on the employees- and offices tables, this role need to be able to make changes in the database concerning the staff and the buildings, anything from an jobtitle change to the location 
 of a newly opened office*
 
-Sales:<br>
+<b>Sales:</b><br>
 *The Sales role has been granted select, insert, update right to the tables: orders, orderdetails and customers. Again no delete rights granted. The Sales role manages the incomming orders, and the orders that gets cancelled aswell so the role need to be able to both commit updates to exsisting orders aswell as insert new ones into the database.*
 
-IT:<br>
+<b>IT</b>:<br>
 *Depending on the size of the company it likely that there are multiple roles with the IT department, such as database-administrator, Tech-support, inhouse-developer and so on - to create all these different roles it outside the scope of this assignment. Instead there will be only one IT role that is granted all privileges, although constrained to the localhost, meaning that only one machine has total access*
 
 For all roles (except the IT role) the rights has been granted on all machines in the company.
