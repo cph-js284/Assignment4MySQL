@@ -1,11 +1,11 @@
 # Assignment4MySQL
 This is the 4th assignment, Databases PB soft2019spring
 
-# The How to.
+# The setup.
 
 1) vagrant ssh into your Ubuntu.
 2) clone the repo and enter the folder
-*since we were instructed not to wrap this inside code, we're going to have to do these next steps manually*
+(*since we were instructed not to wrap this inside code, we're going to have to do these next steps manually*)
 3) get the zip-file, by executing this line in the terminal
 ```
 wget http://www.mysqltutorial.org/wp-content/uploads/2018/03/mysqlsampledatabase.zip
