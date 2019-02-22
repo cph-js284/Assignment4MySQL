@@ -49,7 +49,7 @@ source createusers.sql
 <br>
 <b>Inventory:</b><br> 
 *In order to maintain the tables: products and productlines, the Inventory roles has been granted select,insert,update,delete rights on these 2 tables, the roles has been barred from all other tables in the database, they have also been granted right from every terminal, the role needs these rights to maintain the inventory*
-<br>
+
 <b>Bookkeeping:</b><br>
 *The Bookkeeping role has been granted  read-access(select) to all the tables in the database, should a discepancy occur the role needs to access to check data. Futhermore the role has been granted insert and update access to customers and payment tables, since this is where they need to modify data - no delete granted, the "papir-trail" is wanted*
 
