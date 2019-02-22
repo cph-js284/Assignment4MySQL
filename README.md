@@ -44,7 +44,7 @@ source tmp/mysqlsampledatabase.sql
 <br>
 To run the script that creates the users type<br>
 ```
-source createusers.sql
+source scripts/createusers.sql
 ```
 <b>Inventory:</b><br> 
 *In order to maintain the tables: products and productlines, the Inventory roles has been granted select,insert,update,delete rights on these 2 tables, the roles has been barred from all other tables in the database, they have also been granted right from every terminal, the role needs these rights to maintain the inventory*
