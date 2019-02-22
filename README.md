@@ -46,7 +46,6 @@ To run the script that creates the users type<br>
 ```
 source createusers.sql
 ```
-<br>
 <b>Inventory:</b><br> 
 *In order to maintain the tables: products and productlines, the Inventory roles has been granted select,insert,update,delete rights on these 2 tables, the roles has been barred from all other tables in the database, they have also been granted right from every terminal, the role needs these rights to maintain the inventory*
 
@@ -63,5 +62,6 @@ of a newly opened office*
 <b>IT</b>:<br>
 *Depending on the size of the company it likely that there are multiple roles with the IT department, such as database-administrator, Tech-support, inhouse-developer and so on - to create all these different roles it outside the scope of this assignment. Instead there will be only one IT role that is granted all privileges, although constrained to the localhost, meaning that only one machine has total access*
 
-For all roles (except the IT role) the rights has been granted on all machines in the company.
+<b>For all roles (except the IT role) the rights has been granted on all machines in the company.</b>
+-----------------------------------------------------------------------------------------------------------------
 
