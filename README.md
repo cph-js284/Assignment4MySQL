@@ -5,7 +5,7 @@ This is the 4th assignment, Databases PB soft2019spring
 
 1) vagrant ssh into your Ubuntu.
 2) clone the repo and enter the folder<br>
-(*since we were instructed not to wrap this inside code, we're going to have to do these next steps manually*)
+(*... and yes; all of the following commands could be nicely wraped up in a little script, but since we were instructed not to do that, we're going to have to do these next steps manually*)<br>
 3) get the zip-file, by executing this line in the terminal
 ```
 wget http://www.mysqltutorial.org/wp-content/uploads/2018/03/mysqlsampledatabase.zip
@@ -47,7 +47,7 @@ To run the script that creates the users type<br>
 source /scripts/createusers.sql
 ```
 <b>Inventory:</b><br> 
-*In order to maintain the tables: products and productlines, the Inventory roles has been granted select,insert,update,delete rights on these 2 tables, the roles has been barred from all other tables in the database, they have also been granted right from every terminal, the role needs these rights to maintain the inventory*
+*In order to maintain the tables: products and productlines, the Inventory role has been granted select,insert,update,delete rights on these 2 tables, the roles has been barred from all other tables in the database, they have also been granted right from every terminal, the role needs these rights to maintain the inventory*
 
 <b>Bookkeeping:</b><br>
 *The Bookkeeping role has been granted  read-access(select) to all the tables in the database, should a discepancy occur the role needs to access to check data. Futhermore the role has been granted insert and update access to customers and payment tables, since this is where they need to modify data - no delete granted, the "papir-trail" is wanted*
@@ -64,4 +64,15 @@ of a newly opened office*
 
 <b>For all roles (except the IT role) the rights has been granted on all machines in the company.</b>
 -----------------------------------------------------------------------------------------------------------------
+# 2 logging
+The log-file containing the users created in part 1 plus additional operations on the database is called thelogfile.log
+*the SQL-commands used to execute these additional operations are included in the xtraops.sql file*
 
+-------------------------------------------------------------------------------------------------------------------
+# 3 Backup and recovery
+The file containing the backup of the database is called thebackup.sql.<br>
+The technique used to create this file is *full-local-online-logical-backup* meaning I used the command:
+```
+mysqldump -u root -ppass1234 --all-databases > thebackup.sql
+```
+On a running databases to create a dump.
