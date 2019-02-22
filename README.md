@@ -65,7 +65,7 @@ of a newly opened office*
 <b>For all roles (except the IT role) the rights has been granted on all machines in the company.</b>
 -----------------------------------------------------------------------------------------------------------------
 # 2 logging
-The log-file containing the users created in part 1 plus additional operations on the database is called thelogfile.log
+The log-file containing the users created in part 1 plus additional operations on the database is called thelogfile.log<br>
 *the SQL-commands used to execute these additional operations are included in the xtraops.sql file*
 
 -------------------------------------------------------------------------------------------------------------------
