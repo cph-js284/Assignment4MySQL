@@ -30,7 +30,8 @@ sudo docker cp -a scripts/ mysql01:/
 ```
 sudo docker exec -it mysql01 bash
 ```
-9) log into the MySql database with the credentials you just created
+9) log into the MySql database with the credentials you just created<br>
+*you might encounter this error: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2) - that is Mysql basicly saying its not ready yet, give it a few seconds and retry the login credentials.*
 ```
 mysql -u root -ppass1234
 ```
