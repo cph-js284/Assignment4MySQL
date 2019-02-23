@@ -1,0 +1,45 @@
+/usr/sbin/mysqld, Version: 8.0.15 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+2019-02-23T08:05:01.531353Z	    8 Query	CREATE USER 'Inventory'@'%' IDENTIFIED BY <secret>
+2019-02-23T08:05:01.606717Z	    8 Query	GRANT SELECT,INSERT,UPDATE,DELETE  ON classicmodels.products TO 'Inventory'@'%'
+2019-02-23T08:05:01.625818Z	    8 Query	GRANT SELECT,INSERT,UPDATE,DELETE  ON classicmodels.productlines TO 'Inventory'@'%'
+2019-02-23T08:05:01.648159Z	    8 Query	FLUSH PRIVILEGES
+2019-02-23T08:05:01.658188Z	    8 Query	CREATE USER 'Bookkeeping'@'%' IDENTIFIED BY <secret>
+2019-02-23T08:05:01.787902Z	    8 Query	GRANT SELECT, INSERT, UPDATE ON classicmodels.customers TO 'Bookkeeping'@'%'
+2019-02-23T08:05:01.995353Z	    8 Query	GRANT SELECT, INSERT, UPDATE ON classicmodels.payments TO 'Bookkeeping'@'%'
+2019-02-23T08:05:02.023301Z	    8 Query	GRANT SELECT ON classicmodels.orderdetails TO 'Bookkeeping'@'%'
+2019-02-23T08:05:02.200063Z	    8 Query	GRANT SELECT ON classicmodels.employees TO 'Bookkeeping'@'%'
+2019-02-23T08:05:02.257549Z	    8 Query	GRANT SELECT ON classicmodels.offices TO 'Bookkeeping'@'%'
+2019-02-23T08:05:02.282638Z	    8 Query	GRANT SELECT ON classicmodels.orders TO 'Bookkeeping'@'%'
+2019-02-23T08:05:02.300574Z	    8 Query	GRANT SELECT ON classicmodels.orderdetails TO 'Bookkeeping'@'%'
+2019-02-23T08:05:02.320572Z	    8 Query	GRANT SELECT ON classicmodels.productlines TO 'Bookkeeping'@'%'
+2019-02-23T08:05:02.337447Z	    8 Query	GRANT SELECT ON classicmodels.products TO 'Bookkeeping'@'%'
+2019-02-23T08:05:02.356352Z	    8 Query	FLUSH PRIVILEGES
+2019-02-23T08:05:02.370520Z	    8 Query	CREATE USER 'humanresource'@'%' IDENTIFIED BY <secret>
+2019-02-23T08:05:02.404687Z	    8 Query	GRANT SELECT, INSERT, UPDATE, DELETE ON classicmodels.employees TO 'humanresource'@'%'
+2019-02-23T08:05:02.419408Z	    8 Query	GRANT SELECT, INSERT, UPDATE, DELETE ON classicmodels.offices TO 'humanresource'@'%'
+2019-02-23T08:05:02.434085Z	    8 Query	FLUSH PRIVILEGES
+2019-02-23T08:05:02.448767Z	    8 Query	CREATE USER 'Sales'@'%' IDENTIFIED BY <secret>
+2019-02-23T08:05:02.482519Z	    8 Query	GRANT SELECT, INSERT, UPDATE ON classicmodels . orders TO 'Sales'@'%'
+2019-02-23T08:05:02.500365Z	    8 Query	GRANT SELECT, INSERT, UPDATE ON classicmodels . orderdetails TO 'Sales'@'%'
+2019-02-23T08:05:02.516867Z	    8 Query	GRANT SELECT, INSERT, UPDATE ON classicmodels . customers TO 'Sales'@'%'
+2019-02-23T08:05:02.534610Z	    8 Query	FLUSH PRIVILEGES
+2019-02-23T08:05:02.547372Z	    8 Query	CREATE USER 'IT'@'localhost' IDENTIFIED BY <secret>
+2019-02-23T08:05:02.580475Z	    8 Query	GRANT ALL PRIVILEGES ON classicmodels . * TO 'IT'@'localhost'
+2019-02-23T08:05:02.597673Z	    8 Query	FLUSH PRIVILEGES
+2019-02-23T08:05:13.834962Z	    8 Query	INSERT INTO classicmodels.employees (employeeNumber,lastname, firstname, extension, email, officeCode, reportsTo, jobTitle) values (1703, 'Hanson','Cliver','x101','mymail@hotmail.com','1','1002','Junior Sales')
+2019-02-23T08:05:13.861420Z	    8 Query	INSERT INTO classicmodels.employees(lastName,firstName,extension,email,officeCode,reportsTo,jobTitle)VALUES('larsen','bo','x101','techsupport@live.dk',1,1002,'Tech support')
+2019-02-23T08:05:13.871484Z	    8 Query	INSERT INTO classicmodels.products( productName, productLine, productScale, productVendor, productDescription,quantityInStock, buyPrice, MSRP ) VALUES ('Toyota Lexus','Classic Cars' ,'1:10','Unimax Art Galleries', 'speedy','500', '50','90')
+2019-02-23T08:05:13.880767Z	    8 Query	INSERT INTO classicmodels.orders (orderNumber, orderDate, requiredDate, shippedDate, status, comments, customerNumber) VALUES (10500, '2013-01-09', '2013-01-18', null, 'On Hold', 'Check on availability.', 128)
+2019-02-23T08:05:13.893909Z	    8 Query	INSERT INTO classicmodels.orderdetails (orderNumber, productCode, quantityOrdered, priceEach, orderLineNumber) VALUES (10500, 'S18_1749', 30, 136.00, 3)
+2019-02-23T08:05:13.904725Z	    8 Query	INSERT INTO classicmodels.orderdetails (orderNumber, productCode, quantityOrdered, priceEach, orderLineNumber) VALUES (10500, 'S18_2248', 50, 55.09, 2)
+2019-02-23T08:05:31.670776Z	    8 Quit	
+2019-02-23T08:05:51.847293Z	    9 Connect	Inventory@localhost on  using Socket
+2019-02-23T08:05:51.847358Z	    9 Connect	Access denied for user 'Inventory'@'localhost' (using password: YES)
+2019-02-23T08:06:02.748108Z	   10 Connect	Inventory@localhost on  using Socket
+2019-02-23T08:06:02.748170Z	   10 Connect	Access denied for user 'Inventory'@'localhost' (using password: NO)
+2019-02-23T08:06:22.110865Z	   11 Connect	Inventory@localhost on  using Socket
+2019-02-23T08:06:22.112376Z	   11 Query	select @@version_comment limit 1
+2019-02-23T08:06:40.631829Z	   11 Query	show databases
+2019-02-23T08:07:06.048322Z	   11 Quit	
